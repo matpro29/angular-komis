@@ -16,7 +16,7 @@ export class ListComponent implements OnInit {
     this.carService.getAll().subscribe(data => {
       this.cars = data;
       for (const car of this.cars) {
-        this.giphyService.get(car.name).subscribe(url => car.giphyUrl = url);
+        this.giphyService.get(car.brand).subscribe(url => car.giphyUrl = url);
       }
     });
   }

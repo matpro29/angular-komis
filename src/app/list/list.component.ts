@@ -4,10 +4,10 @@ import { GiphyService } from '../shared/giphy/giphy.service';
 
 @Component({
   selector: 'app-car-list',
-  templateUrl: './car-list.component.html',
-  styleUrls: ['./car-list.component.css']
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.css']
 })
-export class CarListComponent implements OnInit {
+export class ListComponent implements OnInit {
   cars: Array<any>;
 
   constructor(private carService: CarService, private giphyService: GiphyService) { }

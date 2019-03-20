@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ListComponent} from './list/list.component';
-import {EditComponent} from './edit/edit.component';
+import {ListComponent} from './car/list/list.component';
+import {EditComponent} from './car/edit/edit.component';
+import {RegisterComponent} from './user/register/register.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'car/edit/:id',
     component: EditComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   }
 ];
 

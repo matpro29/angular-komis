@@ -1,14 +1,10 @@
 <mat-card>
-  <form #registerForm="ngForm" (ngSubmit)="save(registerForm.value)">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
     <mat-card-header>
-      <mat-card-title><h2>Register</h2></mat-card-title>
+      <mat-card-title><h2>Login</h2></mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <input type="hidden" name="href" [(ngModel)]="user.href">
-      <mat-form-field>
-        <input matInput placeholder="Email" [(ngModel)]="user.email" required name="email">
-      </mat-form-field>
-      <br/>
       <mat-form-field>
         <input matInput placeholder="Username" [(ngModel)]="user.username" required name="username">
       </mat-form-field>
@@ -18,7 +14,7 @@
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.form.valid">Register</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.form.valid">Login</button>
       <a mat-button routerLink="/car/list">Cancel</a>
     </mat-card-actions>
   </form>

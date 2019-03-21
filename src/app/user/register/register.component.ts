@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
   }
 
   save(form: NgForm) {
-    this.userService.save(form).subscribe(result => {
+    this.userService.register(form).subscribe(result => {
       this.gotoList();
     }, error => console.error(error));
   }

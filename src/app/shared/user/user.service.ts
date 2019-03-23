@@ -1,12 +1,14 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {User} from '../../model/model.user';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class UserService {
+  public user: User;
   public API = '//localhost:8080';
   public REGISTER_API = this.API + '/register';
   public LOGIN_API = this.API + '/login';

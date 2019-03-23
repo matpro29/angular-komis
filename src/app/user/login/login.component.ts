@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
           'token',
           btoa(this.user.username + ':' + this.user.password)
         );
-        this.router.navigate(['']);
+        this.router.navigate(['/car/list']);
       } else {
         alert('Authentication failed.');
       }

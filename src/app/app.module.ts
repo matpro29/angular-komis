@@ -3,23 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import { ListComponent } from './car/list/list.component';
+import { IndexComponent } from './component/car/index/index.component';
 import {AppRoutingModule} from './app-routing.module';
 import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EditComponent } from './car/edit/edit.component';
+import { EditComponent } from './component/car/edit/edit.component';
 import {FormsModule} from '@angular/forms';
-import { RegisterComponent } from './user/register/register.component';
-import { LoginComponent } from './user/login/login.component';
+import { RegisterComponent } from './component/user/register/register.component';
+import { LoginComponent } from './component/user/login/login.component';
 import {TokenInterceptor} from './TokenInterceptor';
+import { MyComponent } from './component/car/my/my.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
+    IndexComponent,
     EditComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    MyComponent
   ],
   imports: [
     BrowserModule,

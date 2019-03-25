@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {UserService} from '../user/user.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class CarService {
   public API = '//localhost:8080';
   public CAR_API = this.API + '/cars';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient ) { }
 
   getAll(): Observable<any> {
     return this.http.get(this.API + '/car');
@@ -18,6 +19,11 @@ export class CarService {
 
   get(id: string) {
     return this.http.get(this.CAR_API + '/' + id);
+  }
+
+  getMy(): Observable<any> {
+    const USER_ID = sessionStorage.getItem('user_id');
+    return this.http.post(this.API + '/car/my', USER_ID);
   }
 
   save(car: any): Observable<any> {

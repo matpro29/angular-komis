@@ -3,7 +3,6 @@
   <mat-card-content>
     <mat-list>
       <mat-list-item *ngFor="let car of cars">
-        <img mat-list-avatar src="{{car.giphyUrl}}" alt="{{car.brand}}">
         <h3 mat-line>
           <a mat-button [routerLink]="['/car/edit', car.id]">{{car.brand}} {{car.model}} {{car.year}}</a>
         </h3>

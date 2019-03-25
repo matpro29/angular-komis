@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ListComponent} from './car/list/list.component';
-import {EditComponent} from './car/edit/edit.component';
-import {RegisterComponent} from './user/register/register.component';
-import {LoginComponent} from './user/login/login.component';
+import {IndexComponent} from './component/car/index/index.component';
+import {EditComponent} from './component/car/edit/edit.component';
+import {RegisterComponent} from './component/user/register/register.component';
+import {LoginComponent} from './component/user/login/login.component';
+import {MyComponent} from './component/car/my/my.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/car/list',
+    redirectTo: '/car',
     pathMatch: 'full'
   },
   {
-    path: 'car/list',
-    component: ListComponent
+    path: 'car',
+    component: IndexComponent
+  },
+  {
+    path: 'car/my',
+    component: MyComponent
   },
   {
     path: 'car/add',

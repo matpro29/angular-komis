@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-title>Car List</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let car of cars">
+        <h3 mat-line>
+          <a mat-button>{{car.brand}} {{car.model}} {{car.year}}</a>
+        </h3>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

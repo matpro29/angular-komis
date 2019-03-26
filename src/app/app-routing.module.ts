@@ -5,6 +5,7 @@ import {EditComponent} from './component/car/edit/edit.component';
 import {RegisterComponent} from './component/user/register/register.component';
 import {LoginComponent} from './component/user/login/login.component';
 import {MyComponent} from './component/car/my/my.component';
+import {InfoComponent} from './component/car/info/info.component';
 
 const routes: Routes = [
   {
@@ -29,12 +30,16 @@ const routes: Routes = [
     component: EditComponent
   },
   {
-    path: 'register',
-    component: RegisterComponent
+    path: 'car/info/:id',
+    component: InfoComponent
   },
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   }
 ];
 

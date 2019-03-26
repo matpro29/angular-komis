@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {User} from '../../../model/model.user';
+import {AppComponent} from '../../../app.component';
 
 @Component({
   selector: 'app-component-user-login',
@@ -18,12 +19,12 @@ export class LoginComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private http: HttpClient
+    private http: HttpClient,
+    private appComponent: AppComponent
   ) { }
 
   ngOnInit() {
-    sessionStorage.setItem('token', '');
-    sessionStorage.setItem('user_id', '');
+    sessionStorage.clear();
   }
 
   login() {
@@ -34,12 +35,18 @@ export class LoginComponent implements OnInit {
       if (user) {
         sessionStorage.setItem('token', btoa(this.user.username + ':' + this.user.password));
         this.user = new User(user);
-        sessionStorage.setItem('user_id', this.user.id);
+        sessionStorage.setItem('username', this.user.username);
 
-        this.router.navigate(['/car']);
+        this.appComponent.username = this.user.username;
+
+        this.goToList();
       } else {
         alert('Authentication failed.');
       }
     });
+  }
+
+  goToList() {
+    this.router.navigate(['/car']);
   }
 }

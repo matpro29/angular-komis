@@ -1,5 +1,27 @@
 <mat-toolbar color="primary">
-  <span>Welcome to {{title}}!</span>
+  <span>Komis</span>
+
+  <mat-card-actions>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="primary" type="submit" routerLink="/car">Cars</button>
+  </mat-card-actions>
+
+  <mat-card-actions *ngIf="username">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="primary" type="submit" routerLink="/car/my">My cars</button>
+  </mat-card-actions>
+
+  <mat-card-actions *ngIf="!username">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="primary" type="submit" routerLink="/login">Login</button>
+  </mat-card-actions>
+
+  <form *ngIf="username" #logoutForm="ngForm" (ngSubmit)="username = ''">
+    <mat-card-actions>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="primary" type="submit" [disabled]="!logoutForm.form.valid">Logout</button>
+    </mat-card-actions>
+  </form>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

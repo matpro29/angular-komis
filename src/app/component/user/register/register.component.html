@@ -14,7 +14,11 @@
       </mat-form-field>
       <br/>
       <mat-form-field>
-        <input matInput placeholder="Password" [(ngModel)]="user.password" required name="password">
+        <input type="password" matInput placeholder="Password" [(ngModel)]="user.password" required name="password">
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <input matInput placeholder="Phone" [(ngModel)]="user.phone" required name="phone">
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions>

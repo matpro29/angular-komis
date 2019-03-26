@@ -3,6 +3,7 @@ export class User {
   email: string;
   username: string;
   password: string;
+  phone: string;
   role: string;
 
   constructor(user: any) {
@@ -10,6 +11,7 @@ export class User {
     this.email = user.email;
     this.username = user.username;
     this.password = user.password;
+    this.phone = user.phone
     this.role = user.role;
   }
 }

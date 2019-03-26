@@ -4,7 +4,7 @@
     <mat-list>
       <mat-list-item *ngFor="let car of cars">
         <h3 mat-line>
-          <a mat-button>{{car.brand}} {{car.model}} {{car.year}}</a>
+          <a mat-button [routerLink]="['/car/info', car.id]">{{car.brand}} {{car.model}} {{car.year}}</a>
         </h3>
       </mat-list-item>
     </mat-list>

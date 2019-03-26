@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-title>Car</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <h3 mat-line>
+          Brand: <a mat-button>{{car.brand}}</a>
+        </h3>
+      </mat-list-item>
+      <mat-list-item>
+        <h3 mat-line>
+          Model: <a mat-button>{{car.model}}</a>
+        </h3>
+      </mat-list-item>
+      <mat-list-item>
+        <h3 mat-line>
+          Year: <a mat-button>{{car.year}}</a>
+        </h3>
+      </mat-list-item>
+      <mat-list-item>
+        <h3 mat-line>
+          Price: <a mat-button>{{car.price}}</a>
+        </h3>
+      </mat-list-item>
+      <mat-list-item>
+        <h3 mat-line>
+          Description: <a mat-button>{{car.description}}</a>
+        </h3>
+      </mat-list-item>
+    </mat-list>
+    <mat-card-actions>
+      <a mat-button routerLink="/car">Cancel</a>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

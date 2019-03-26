@@ -11,8 +11,9 @@ import { EditComponent } from './component/car/edit/edit.component';
 import {FormsModule} from '@angular/forms';
 import { RegisterComponent } from './component/user/register/register.component';
 import { LoginComponent } from './component/user/login/login.component';
-import {TokenInterceptor} from './TokenInterceptor';
+import {TokenInterceptor} from './security/TokenInterceptor';
 import { MyComponent } from './component/car/my/my.component';
+import { InfoComponent } from './component/car/info/info.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MyComponent } from './component/car/my/my.component';
     EditComponent,
     RegisterComponent,
     LoginComponent,
-    MyComponent
+    MyComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

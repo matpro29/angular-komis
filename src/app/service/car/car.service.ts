@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {UserService} from '../user/user.service';
+import {User} from '../../model/model.user';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +32,8 @@ export class CarService {
     if (car['href']) {
       result = this.http.put(car.href, car);
     } else {
-      result = this.http.post(this.CAR_API, car);
+      car.username = sessionStorage.getItem('username');
+      result = this.http.post(this.API + '/car/add', car);
     }
     return result;
   }

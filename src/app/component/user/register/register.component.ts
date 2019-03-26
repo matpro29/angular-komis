@@ -16,13 +16,13 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() { }
 
-  gotoList() {
-    this.router.navigate(['/car']);
+  goToLogin() {
+    this.router.navigate(['/login']);
   }
 
   save(form: NgForm) {
     this.userService.register(form).subscribe(result => {
-      this.gotoList();
+      this.goToLogin();
     }, error => console.error(error));
   }
 }

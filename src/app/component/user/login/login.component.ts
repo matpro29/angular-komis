@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('token', btoa(this.user.username + ':' + this.user.password));
         this.user = new User(user);
         sessionStorage.setItem('username', this.user.username);
+        sessionStorage.setItem('user_id', this.user.id);
 
         this.appComponent.username = this.user.username;
 

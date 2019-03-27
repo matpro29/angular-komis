@@ -20,9 +20,9 @@ export class InfoComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       const id = params['id'];
       if (id) {
-        this.carService.get(id).subscribe((car: any) => {
+        this.carService.getInfo(id).subscribe((car: any) => {
           if (car) {
-            this.car = car;
+            this.car = car;console.log(this.car);
             this.car.href = car._links.self.href;
           } else {
             console.log(`Car with id '${id}' not found, returning to list`);

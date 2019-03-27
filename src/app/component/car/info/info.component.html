@@ -27,9 +27,21 @@
           Description: <a mat-button>{{car.description}}</a>
         </h3>
       </mat-list-item>
+      <mat-list-item>
+        <h3 mat-line>
+          Username: <a mat-button>{{car.user.username}}</a>
+        </h3>
+      </mat-list-item>
+      <mat-list-item>
+        <h3 mat-line>
+          Email: <a mat-button>{{car.user.email}}</a>
+        </h3>
+      </mat-list-item>
+      <mat-list-item>
+        <h3 mat-line>
+          Phone: <a mat-button>{{car.user.phone}}</a>
+        </h3>
+      </mat-list-item>
     </mat-list>
-    <mat-card-actions>
-      <a mat-button routerLink="/car">Cancel</a>
-    </mat-card-actions>
   </mat-card-content>
 </mat-card>

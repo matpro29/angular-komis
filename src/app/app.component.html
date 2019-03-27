@@ -16,7 +16,12 @@
     <button mat-raised-button color="primary" type="submit" routerLink="/login">Login</button>
   </mat-card-actions>
 
-  <form *ngIf="username" #logoutForm="ngForm" (ngSubmit)="username = ''">
+  <mat-card-actions *ngIf="!username">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="primary" type="submit" routerLink="/register">Register</button>
+  </mat-card-actions>
+
+  <form *ngIf="username" #logoutForm="ngForm" (ngSubmit)="logout()">
     <mat-card-actions>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button mat-raised-button color="primary" type="submit" [disabled]="!logoutForm.form.valid">Logout</button>

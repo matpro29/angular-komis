@@ -22,6 +22,10 @@ export class CarService {
     return this.http.get(this.CAR_API + '/' + id);
   }
 
+  getInfo(id: string) {
+    return this.http.post(this.API + '/car/info', id);
+  }
+
   getMy(): Observable<any> {
     const USER_ID = sessionStorage.getItem('user_id');
     return this.http.post(this.API + '/car/my', USER_ID);
